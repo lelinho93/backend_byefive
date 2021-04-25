@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
-const Posts = require('../../src/models/Posts')
+
 
 export class UserController {
 
