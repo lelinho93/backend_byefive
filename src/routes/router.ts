@@ -25,7 +25,7 @@ router.post('/login', new UserController().login)
 
 
 
-router.delete('/:id', async (req: Request, res: Response) => {
+router.delete('/delete/:id', async (req: Request, res: Response) => {
     try {
         const post = await Posts.findByIdAndDelete(req.params.id)
         if(!post) throw new Error('Post not found!')

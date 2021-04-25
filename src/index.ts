@@ -2,22 +2,25 @@ import dotenv from 'dotenv'
 
 const express = require('express')
 const mongoose = require('mongoose')
-const postsRoutes = require('../routes/api/router')
+const bodyParser = require('body-parser')
+const postsRoutes = require('./routes/router')
 
 
 //************************Config************************* */
 
 const app = express()
 
-app.use(express.json())
+app.use(bodyParser.json())
+
 
 dotenv.config()
 
 const cors = require("cors")
 
+app.use(cors())
+
 app.use((req: any, res: any, next: any) => {
-    res.header("Access-Control-Allow-Origin")
-    app.use(cors())
+    res.header("Access-Control-Allow-Origin: http://localhost:5000")    
     next()
 })
 
@@ -33,7 +36,7 @@ mongoose.connect(process.env.MONGO_URI, {
 
 //********************** Routes **************************** */
 
-app.use(postsRoutes)
+app.use("/api", postsRoutes)
 
 
 //************************Server************************** */
