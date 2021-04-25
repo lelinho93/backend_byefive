@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 
 const express = require('express')
 const mongoose = require('mongoose')
-const { MONGO_URI } = require('./config')
 const postsRoutes = require('../routes/api/router')
 
 
@@ -25,7 +24,7 @@ app.use((req: any, res: any, next: any) => {
 
 //**********************DB Connection******************** */
 
-mongoose.connect(MONGO_URI, {
+mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
