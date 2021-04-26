@@ -1,12 +1,46 @@
+import dotenv from 'dotenv'
+
 const express = require('express')
-import { Request, Response } from 'express'
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
+const postsRoutes = require('./routes/router')
+
+
+//************************Config************************* */
 
 const app = express()
 
-app.get('/', (req: Request, res: Response) => {
-    res.send("Hello Node!")
+app.use(bodyParser.json())
+
+
+dotenv.config()
+
+const cors = require("cors")
+
+app.use(cors({ origin: 'http://localhost:3001'}))
+
+app.use((req: any, res: any, next: any) => {
+    res.header("Access-Control-Allow-Origin: http://localhost:3001")    
+    next()
 })
+
+
+//**********************DB Connection******************** */
+
+mongoose.connect(process.env.MONGO_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected!'))
+.catch((error: any) => console.log(error))
+
+//********************** Routes **************************** */
+
+app.use("/api", postsRoutes)
+
+
+//************************Server************************** */
 
 const PORT = process.env.PORT || 5000
 
-app.listen(PORT, () => console.log(`Server is running at port ${PORT}`))
+app.listen(PORT, () => console.log(`Server is running in http://localhost:${PORT}`))
