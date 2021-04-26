@@ -7,9 +7,13 @@ export class DeleteUserController {
         const deleteUserBusiness = new DeleteUserBusiness()
 
         try {
-            const id: string = req.params.id
+            const id: string = req.body.id
+
+            console.log(id)
 
             await deleteUserBusiness.create(id)
+
+            
             res.status(200).send("Usuário deletado!") 
             
         } catch (error) {

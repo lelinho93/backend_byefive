@@ -12,15 +12,14 @@ const app = express()
 
 app.use(bodyParser.json())
 
-
 dotenv.config()
 
 const cors = require("cors")
 
-app.use(cors({ origin: 'http://localhost:3001'}))
+app.use(cors({ origin: 'http://uneven-stamp.surge.sh'}))
 
 app.use((req: any, res: any, next: any) => {
-    res.header("Access-Control-Allow-Origin: http://localhost:3001")    
+    res.header("Access-Control-Allow-Origin: http://localhost:3000")    
     next()
 })
 
