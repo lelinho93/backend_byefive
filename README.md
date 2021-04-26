@@ -37,7 +37,7 @@ Obs.: Está com um pequeno bug nesse deploy, precisa de alguma alteração para 
 
 * Para rodar este projeto em sua máquina local é necessário ter a última versão do Node.js instalado (https://nodejs.org/en/);
 * Clonar o repositório para sua maquina local através do link do github e terminal git;
-* Na pasta raiz do projeto executar o seguintes comandos: <npm install> para instalar todas as dependências do npm, <npm run start> ou <npm run start:dev> para que o servidor seja executado, automaticamente o node irá fazer com que o servidor fique escutando a porta na qual foi designada no código e assim já recebendo e respondendo as requisições.
+* Na pasta raiz do projeto executar o seguintes comandos: "npm install" para instalar todas as dependências do npm, "npm run start" ou "npm run start:dev" para que o servidor seja executado, automaticamente o node irá fazer com que o servidor fique escutando a porta na qual foi designada no código e assim já recebendo e respondendo as requisições.
 
 # Banco de dados MongoDB
 
