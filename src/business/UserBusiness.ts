@@ -33,7 +33,7 @@ export class UserBusiness {
             return token
             
         } catch (error) {
-            throw new Error(`Error ao criar: ${error.message}`)
+            throw new Error(`Erro ao criar: ${error.message}`)
         }
     }
     async login(email:string, password: string): Promise<string> {

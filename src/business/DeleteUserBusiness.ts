@@ -2,7 +2,7 @@ import { DeleteUserDataBase } from "../data/DeleteUserDataBase";
 
 export class DeleteUserBusiness {
 
-    async create(id: string): Promise<void> {
+    async create(id: string): Promise<any> {
 
         try {
             const deleteUserDataBase = new DeleteUserDataBase()
@@ -14,9 +14,8 @@ export class DeleteUserBusiness {
 
             await deleteUserDataBase.create(id)
             
-        } catch (error) {
-            
-            throw new Error(`Error on fetch: ${error.message}`)
+        } catch (error) {            
+            throw new Error(`Erro ao deletar: ${error.message}`)
         }
     }
 }

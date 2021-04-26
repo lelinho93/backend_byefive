@@ -11,6 +11,6 @@ router.get('/user/all', new GetAllUsersController().create)
 router.post('/signup', new UserController().create)
 router.post('/login', new UserController().login)
 
-router.delete('/user/delete/:id', new DeleteUserController().create)
+router.delete('/user/delete', new DeleteUserController().create)
 
 module.exports = router;
