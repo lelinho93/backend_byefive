@@ -17,10 +17,10 @@ dotenv.config()
 
 const cors = require("cors")
 
-app.use(cors())
+app.use(cors({ origin: 'http://localhost:3001'}))
 
 app.use((req: any, res: any, next: any) => {
-    res.header("Access-Control-Allow-Origin: http://localhost:5000")    
+    res.header("Access-Control-Allow-Origin: http://localhost:3001")    
     next()
 })
 
