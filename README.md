@@ -29,9 +29,10 @@ Obs.: Está com um pequeno bug nesse deploy, precisa de alguma alteração para 
 * Clonar o repositório para sua maquina local através do link do github e terminal git
 * Na pasta raiz do projeto executar o seguintes comandos: <npm install> para instalar todas as dependências do npm, <npm run start> ou <npm run start:dev> para que o servidor seja executado, automaticamente o node irá fazer com que o servidor fique escutando a porta na qual foi designada no código e assim já recebendo e respondendo as requisições.
 
-# Banco de dados MongoDB!
+# Banco de dados MongoDB
 
-[Firefox_Screenshot_2021-04-26T16-22-16 758Z](https://user-images.githubusercontent.com/71237016/116117300-739c6f00-a692-11eb-9937-01ffae4fc3eb.png)
+![Firefox_Screenshot_2021-04-26T16-22-16 758Z](https://user-images.githubusercontent.com/71237016/116117814-0ccb8580-a693-11eb-9ba5-e5dcab8d7ddb.png)
+
 
 
 
