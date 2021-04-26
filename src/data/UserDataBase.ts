@@ -2,7 +2,6 @@ import { user } from "../models/User"
 
 const Users = require('../models/Posts')
 
-
 export class UserDataBase  {
 
     async create(name: string, email: string, password: string) {  

@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { UserBusiness } from "../business/UserBusiness";
 
-
 export class UserController {
 
     async create(req: Request, res: Response) {
