@@ -9,8 +9,6 @@ export class DeleteUserController {
         try {
             const id: string = req.body.id
 
-            console.log(id)
-
             await deleteUserBusiness.create(id)
 
             
