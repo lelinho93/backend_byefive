@@ -33,7 +33,6 @@ Por fim, há um endpoint que disponibiliza todos os usuários cadastrado na base
 # Como rodar? 
 
 * Este backend está hospedado na nuvem do heroku com o seguinte link: https://backend-byefive.herokuapp.com/
-Obs.: Está com um pequeno bug nesse deploy, precisa de alguma alteração para funcionar perfeitamente(será feito em breve)
 
 * Para rodar este projeto em sua máquina local é necessário ter a última versão do Node.js instalado (https://nodejs.org/en/);
 * Clonar o repositório para sua maquina local através do link do github e terminal git;
